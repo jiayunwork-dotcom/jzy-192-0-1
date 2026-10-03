@@ -1,0 +1,268 @@
+:root {
+  --bg: #f4f5f7;
+  --panel: #ffffff;
+  --line: #d9dde3;
+  --ink: #1f2933;
+  --muted: #66788a;
+  --blue: #1f6fb2;
+  --blue-bg: #e8f1f9;
+  --amber: #b15c00;
+  --amber-bg: #fdf0dd;
+  --green: #1d7a46;
+  --red: #c0392b;
+  --red-bg: #fbeae8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family:
+    'PingFang SC', 'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif;
+  font-size: 14px;
+}
+
+header.topbar {
+  background: #18324a;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+header.topbar h1 {
+  font-size: 17px;
+  margin: 0;
+  font-weight: 600;
+}
+
+nav.tabs {
+  display: flex;
+  gap: 4px;
+}
+
+nav.tabs button {
+  background: transparent;
+  border: 0;
+  color: #b9ccd9;
+  padding: 6px 14px;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+nav.tabs button.active {
+  background: var(--bg);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+main {
+  padding: 18px 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.panel h2 {
+  font-size: 15px;
+  margin: 0 0 12px;
+}
+
+.panel h3 {
+  font-size: 14px;
+  margin: 14px 0 8px;
+  color: var(--muted);
+}
+
+table.grid {
+  border-collapse: collapse;
+  width: 100%;
+  font-variant-numeric: tabular-nums;
+}
+
+table.grid th,
+table.grid td {
+  border: 1px solid var(--line);
+  padding: 5px 8px;
+  text-align: center;
+  height: 34px;
+}
+
+table.grid th {
+  background: #eef1f4;
+  font-weight: 600;
+}
+
+table.grid td input {
+  width: 72px;
+  border: 1px solid transparent;
+  background: transparent;
+  text-align: center;
+  font: inherit;
+  padding: 3px 4px;
+  border-radius: 4px;
+}
+
+table.grid td input:hover {
+  border-color: var(--line);
+}
+
+table.grid td input:focus {
+  border-color: var(--blue);
+  outline: none;
+  background: #fff;
+}
+
+td.cell-base {
+  background: #fafbfc;
+}
+
+td.cell-override {
+  background: var(--amber-bg);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 1px 6px;
+  border-radius: 10px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.badge.base {
+  background: #eef1f4;
+  color: var(--muted);
+}
+
+.badge.override {
+  background: var(--amber-bg);
+  color: var(--amber);
+}
+
+.badge.status-draft {
+  background: var(--blue-bg);
+  color: var(--blue);
+}
+
+.badge.status-published {
+  background: #e6f4ec;
+  color: var(--green);
+}
+
+button.btn {
+  background: var(--blue);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button.btn.secondary {
+  background: #eef1f4;
+  color: var(--ink);
+}
+
+button.btn.danger {
+  background: var(--red);
+}
+
+button.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+select,
+input.field {
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  padding: 6px 8px;
+  font: inherit;
+  background: #fff;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.errors {
+  background: var(--red-bg);
+  border: 1px solid #eec6c0;
+  color: var(--red);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.errors ul {
+  margin: 4px 0 0;
+  padding-left: 18px;
+}
+
+.ok-flash {
+  background: #e6f4ec;
+  color: var(--green);
+  border-radius: 6px;
+  padding: 8px 12px;
+  margin-bottom: 12px;
+}
+
+.kiln-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+  gap: 12px;
+}
+
+.kiln-card {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 12px 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.kiln-card:hover {
+  border-color: var(--blue);
+}
+
+.kiln-card.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px var(--blue-bg);
+}
+
+.kiln-card .name {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.kiln-card .big {
+  font-size: 26px;
+  font-weight: 600;
+  margin: 6px 0 2px;
+}
+
+.idle {
+  color: var(--muted);
+}
