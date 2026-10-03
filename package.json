@@ -1,0 +1,16 @@
+{
+  "name": "kiln-drying-system",
+  "private": true,
+  "version": "1.0.0",
+  "description": "木材干燥窑基准管理与运行监控系统",
+  "workspaces": [
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev:server": "npm --workspace server run dev",
+    "dev:web": "npm --workspace web run dev",
+    "build:web": "npm --workspace web run build",
+    "test": "npm --workspace server run test"
+  }
+}
